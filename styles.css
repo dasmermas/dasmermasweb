@@ -1,10 +1,33 @@
-html {
-    height: 100%;
-    overflow: hidden;
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  font-family: monospace;
+}
+
+.content {
+  text-align: center;
+  padding: 1rem;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+pre {
+  font-size: clamp(8px, 2vw, 14px);
+  line-height: 1.2;
+  white-space: pre;
+}
+
+@media (max-width: 768px) {
+  pre {
+    font-size: 9px;
+  }
 }
