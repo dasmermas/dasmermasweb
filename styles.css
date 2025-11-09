@@ -21,9 +21,11 @@ body {
 }
 
 pre {
-  font-size: clamp(8px, 2vw, 14px);
-  line-height: 1.2;
+  font-family: monospace;
+  font-size: 1.2ch;
+  line-height: 1;
   white-space: pre;
+  overflow-x: auto;
 }
 
 @media (max-width: 768px) {
