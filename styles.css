@@ -1,7 +1,9 @@
 html, body {
+  /* Establece la altura mínima para centrar el contenido verticalmente */
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: hidden; /* ¡Importante! Elimina el scroll horizontal en toda la página */
 }
 
 body {
@@ -10,26 +12,47 @@ body {
   align-items: center;
   background-color: black;
   color: white;
-  font-family: monospace;
+  font-family: monospace; /* Fuente monoespaciada como fallback global */
 }
 
 .content {
   text-align: center;
   padding: 1rem;
-  overflow-x: auto;
+  /* Ya no necesitamos overflow-x: auto aquí, ya que el arte se ajustará */
   max-width: 100%;
+  width: 100%;
 }
 
 pre {
+  /* Reglas básicas de <pre> para mantener el formato */
   font-family: monospace;
-  font-size: 1.2ch;
-  line-height: 1;
+  line-height: 1; /* Esencial para el ASCII */
   white-space: pre;
-  overflow-x: auto;
 }
 
+.ascii {
+  /* Las reglas específicas para el arte ASCII */
+  display: block; /* Asegura que ocupe todo el ancho disponible */
+  
+  /* --- CLAVE PARA EVITAR EL SCROLL --- */
+  
+  /* Esconde el scroll en este elemento, el tamaño de fuente se encargará del ajuste */
+  overflow-x: hidden; 
+  
+  /* El tamaño base para escritorio/tableta */
+  /* El valor de 1.2vw o 1.3vw funciona bien con tu arte */
+  font-size: 1.3vw; 
+  
+  /* Garantiza un tamaño mínimo para legibilidad */
+  min-font-size: 8px; 
+}
+
+/* Regla específica para móviles (pantallas pequeñas) */
 @media (max-width: 768px) {
-  pre {
-    font-size: 9px;
+  .ascii {
+    /* Aumentamos el valor de vw en el móvil para que el arte se vea más grande y legible, 
+       pero seguirá ajustándose al ancho de la pantalla sin scroll.
+       AJUSTA ESTE VALOR (ej. 3.2vw) si todavía ves scroll o si es demasiado pequeño. */
+    font-size: 3.2vw; 
   }
 }
