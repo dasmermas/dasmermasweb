@@ -5,42 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Las Memas</title>
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    body {
-      background-color: black;
-      color: white;
-      margin: 0;
-      font-family: monospace;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      overflow-x: hidden;
-    }
+<style>
+  body {
+    background-color: black;
+    color: white;
+    margin: 0;
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
 
-    .content {
-      text-align: center;
-      padding: 20px;
-      max-width: 100%;
-      overflow-x: auto;
-    }
+  .content {
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    overflow-x: auto; /* permite scroll horizontal si hace falta */
+  }
 
-    pre {
-      font-size: clamp(8px, 2vw, 14px);
-      line-height: 1.2;
-      white-space: pre;
-    }
+  pre.ascii {
+    font-family: monospace;
+    line-height: 1;
+    white-space: pre;
+    display: inline-block;
+    text-align: left;
+    overflow-x: auto;
+    max-width: 100%;
+    font-size: calc(0.5rem + 0.5vw); /* se adapta sin deformar */
+  }
 
-    h3 {
-      margin: 0;
+  @media (max-width: 600px) {
+    pre.ascii {
+      font-size: 2.8vw; /* más legible y proporcional en móviles */
     }
-
-    @media (max-width: 600px) {
-      pre {
-        font-size: 10px;
-      }
-    }
-  </style>
+  }
+</style>
 </head>
 
 <body>
