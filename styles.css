@@ -1,67 +1,10 @@
-html, body {
-  /* Establece la altura mínima para centrar el contenido verticalmente */
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  /* Mantenemos hidden para evitar scroll horizontal indeseado a nivel global */
-  overflow-x: hidden; 
+html {
+    height: 100%;
+    overflow: hidden;
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: black;
-  color: white;
-  font-family: monospace; 
-  /* Aseguramos que el contenedor ocupe al menos la altura de la ventana */
-  min-height: 100vh; 
-}
-
-.content {
-  text-align: center;
-  padding: 1rem;
-  /* Permitimos que el contenido tenga un ancho fijo máximo en desktop */
-  max-width: 900px; /* **CORRECCIÓN 1: Límite de ancho para el contenido** */
-  width: 100%;
-}
-
-pre {
-  /* Reglas básicas de <pre> */
-  font-family: monospace;
-  line-height: 1; 
-  white-space: pre;
-  margin: 1rem auto; /* Centrar los bloques pre */
-}
-
-.ascii {
-  display: block; 
-  overflow-x: hidden; 
-  
-  /* **CORRECCIÓN 2: Límite del tamaño de la fuente para desktop** */
-  /* Usamos `clamp` o una media query para limitar el tamaño MÁXIMO de la fuente */
-  /* Clamp(tamaño mínimo, tamaño responsivo, tamaño máximo) */
-  font-size: clamp(10px, 1.3vw, 16px); 
-
-  /* **CORRECCIÓN 3: Evitar el corte del título en cajas** */
-  /* El arte ASCII más ancho (el título) tiene más de 100 caracteres de ancho.
-     Limitamos su ancho máximo en la mayoría de los casos para que quepa. */
-  max-width: 100ch; /* 'ch' es el ancho de un carácter monoespaciado. 
-                       Tu título tiene ~140, lo forzamos a caber. */
-  margin: 1rem auto; /* Centrar el bloque específico */
-}
-
-/* Regla específica para móviles (pantallas pequeñas) */
-@media (max-width: 768px) {
-  .content {
-    /* En móvil, queremos usar el 100% del ancho */
-    max-width: 100%;
-  }
-
-  .ascii {
-    /* Valor responsivo y legible en móvil */
-    font-size: 3.2vw; 
-    /* Quitamos la limitación de ancho para que el VW haga su trabajo */
-    max-width: 100%; 
-  }
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
