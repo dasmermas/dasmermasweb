@@ -1,6 +1,7 @@
 html {
     height: 100%;
     overflow: hidden;
+    /*'ESTO QUE ARGREGO AHORA ES LA FUENTE DEL HTML'*/
     font-family: "grenze-gotisch", sans-serif;
 font-weight: 100;
 font-style: normal;
@@ -30,4 +31,5 @@ a:hover {
   color: #cccccc; 
   text-decoration: underline;
 }
+
 
