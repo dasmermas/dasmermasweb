@@ -8,3 +8,22 @@ body {
     padding: 0;
     height: 100%;
 }
+
+/* Color para enlaces NO visitados */
+a {
+  color: white; 
+  text-decoration: none; 
+}
+
+/* Color para enlaces VISITADOS */
+a:visited {
+  /* ¡CLAVE! Usar !important para anular cualquier estilo de navegador o predeterminado 
+     que esté forzando el color violeta. */
+  color: white !important; 
+}
+
+/* Opcional: Color al pasar el cursor */
+a:hover {
+  color: #cccccc; 
+  text-decoration: underline;
+}
