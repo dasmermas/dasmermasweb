@@ -53,7 +53,8 @@ pre {
     /* Aumentamos el valor de vw en el móvil para que el arte se vea más grande y legible, 
        pero seguirá ajustándose al ancho de la pantalla sin scroll.
        AJUSTA ESTE VALOR (ej. 3.2vw) si todavía ves scroll o si es demasiado pequeño. */
-    font-size: 1vw; 
+    font-size: 10vw; 
   }
 }
+
 
